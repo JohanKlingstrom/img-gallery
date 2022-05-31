@@ -26,6 +26,26 @@ gridItems.forEach((item, index) => {
         }
 
         gridItems[index].classList.add('active');
+
+        if(index == 0 || index == 3){
+            setActive([0,3]);
+        }
+
+        if(index == 1 || index == 4){
+            setActive([1,4]);
+        }
+
+        if(index == 2 || index == 5){
+            setActive([2,5]);
+        }
+
+        if(index <= 2){
+            gridRows[0].style.height = '70%';
+            gridRows[1].style.height = '30%';
+        } else {
+            gridRows[0].style.height = '30%';
+            gridRows[1].style.height = '70%';
+        }
     })
 })
 
@@ -38,3 +58,11 @@ function setActive(indexArray) {
         }
     }
 }
+
+setTimeout(() => {
+    heading.classList.add('show');
+}, 500);
+
+setTimeout(() => {
+    grid.style.opacity = 1;
+}, 750);
