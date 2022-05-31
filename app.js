@@ -57,7 +57,16 @@ function setActive(indexArray) {
             gridItems[i].classList.remove('expand');
         }
     }
-}
+};
+
+window.addEventListener('resize', () => {
+    for(let i = 0; i < gridItems.length; i++){
+        gridItems[i].classList.remove('active');
+        gridItems[i].classList.remove('expand');
+        gridRows[0].style.height = '50%'
+        gridRows[1].style.height = '50%'
+    }
+})
 
 setTimeout(() => {
     heading.classList.add('show');

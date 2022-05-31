@@ -170,3 +170,41 @@ span {
     opacity: 1;
     transition: 0.9s;
 }
+
+@media screen and (max-width: 600px) {
+    .header {
+      height: 15%;
+      padding: 20px;
+    }
+  
+    .grid {
+      top: 15%;
+      height: 85%;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .grid-item {
+      border-right: none;
+    }
+  
+    .heading h1 {
+      font-size: 50px;
+    }
+  
+    h2 {
+      font-family: "ivar";
+      letter-spacing: 1px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  
+    h5 {
+      font-family: "NeueMontreal";
+      font-size: 8px;
+      position: absolute;
+      bottom: 0;
+    }
+  }
